@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "187302319811",
+    "project_id": "ecommerce-fruite-hub",
+    "storage_bucket": "ecommerce-fruite-hub.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187302319811:android:c96ee080a19832d7727476",
+        "android_client_info": {
+          "package_name": "com.example.ecommercefruiteshub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187302319811-tda4vmromo3t3l9kd9o8kmhfl7klj3fe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecommercefruiteshub",
+            "certificate_hash": "15b04851e82c5118167706da660aff3164adbe4f"
+          }
+        },
+        {
+          "client_id": "187302319811-l44jbs27nrbreo4mo0s58869pacf80rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiz0-GZpiddRnEIYZUbqU-GuKOyDS7poE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187302319811-l44jbs27nrbreo4mo0s58869pacf80rf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "187302319811-f4bk47qvgnsikdhq91t0sfqkas5vfhvb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ecommercefruiteshub"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
