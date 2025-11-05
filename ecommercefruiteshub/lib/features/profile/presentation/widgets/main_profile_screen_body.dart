@@ -78,6 +78,7 @@ class _MainProfileScreenBodyState extends State<MainProfileScreenBody> {
               traillingWidget: Icon(Icons.arrow_back_ios_new),
               title: "orders".tr(),
               onTap: () {
+                print("orders");
                 PersistentNavBarNavigator.pushNewScreen(
                   context,
                   withNavBar: false,
