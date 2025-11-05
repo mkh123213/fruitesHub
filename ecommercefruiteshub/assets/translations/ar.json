@@ -1,6 +1,6 @@
 {
     "skip": "تخط",
-    "welcome": "مرحبًا بك في",
+    "welcome": "مرحبًا بك ",
     "enter_and_shop": "ابحث وتسوق",
     "decriptionInSplash1": "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     "next": "التالي",
@@ -88,5 +88,8 @@
     "confirm_password": "تاكيد الرقم السري",
     "new_password": "كلمة المرور الجديدة",
     "re_write_new_password": "كلمة المرور الجديدة",
-    "too_many_requests": "عدد كبير من الطلبات"
+    "too_many_requests": "عدد كبير من الطلبات",
+    "no_order": "لا يوجد طلبات",
+    "update_orders": "تحديث الطلبات",
+    "search_result_not_found": "لم يتم العثور على نتايج البحث"
 }

@@ -4,16 +4,18 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/build_error_bar.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/get_user.dart';
+import 'package:ecommercefruiteshub/core/widgets/custom_network_image.dart';
 import 'package:ecommercefruiteshub/core/widgets/custom_progress_hud.dart';
 import 'package:ecommercefruiteshub/features/profile/presentation/cubit/cubit/main_profile_cubit.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
-class ProfileImgPicker extends StatelessWidget {
-  const ProfileImgPicker({super.key, required this.imgUrl});
-  final String imgUrl;
+class ProfileImgPickerBlocConsumer extends StatelessWidget {
+  const ProfileImgPickerBlocConsumer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -25,7 +27,8 @@ class ProfileImgPicker extends StatelessWidget {
             listenWhen: (previous, current) =>
                 current is LoadingImgStart ||
                 current is LoadingImgError ||
-                current is LoadingImgSUccess,
+                current is LoadingImgSUccess ||
+                current is SaveProfilPIctureUrlSuccess,
 
             listener: (context, state) {
               if (state is LoadingImgError) {
@@ -43,15 +46,11 @@ class ProfileImgPicker extends StatelessWidget {
             builder: (context, state) {
               return CustomProgressHud(
                 isLoading: state is LoadingImgStart,
-                child: state is LoadingImgSUccess
-                    ? CachedNetworkImage(
-                        fit: BoxFit.scaleDown,
-
-                        imageUrl: state.imageUrl,
-                        errorWidget: (context, url, error) =>
-                            const Icon(Icons.error),
-                      )
-                    : Center(child: Text(getUser().name.trimLeft())),
+                child: CustomNetworkImage(
+                  imageUrl: state is LoadingImgSUccess
+                      ? state.imageUrl
+                      : getUser().profilePicture!,
+                ),
               );
             },
           ),

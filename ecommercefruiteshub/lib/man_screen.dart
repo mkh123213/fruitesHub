@@ -4,7 +4,7 @@ import 'package:ecommercefruiteshub/core/helper_functions/build_error_bar.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/get_user.dart';
 import 'package:ecommercefruiteshub/core/services/get_it_service.dart';
 
-import 'package:ecommercefruiteshub/core/utils/app_text_styles.dart';
+import 'package:ecommercefruiteshub/core/theming/app_text_styles.dart';
 import 'package:ecommercefruiteshub/features/cart/presentation/cubit/cubit/cart_entity_cubit.dart';
 import 'package:ecommercefruiteshub/features/cart/presentation/screens/cart_screen.dart';
 import 'package:ecommercefruiteshub/features/profile/presentation/cubit/cubit/main_profile_cubit.dart';

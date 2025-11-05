@@ -106,4 +106,16 @@ class MainProfileRemoteDataSource {
       throw CustomException(message: 'No internet connection');
     }
   }
+
+  Future<void> changeProfilePicture({required String profileImgUrl}) async {
+    if (await networkInfo.isConnected == true) {
+      try {
+        authService.changeProfilePicture(profileImgUrl: profileImgUrl);
+      } catch (e) {
+        throw CustomException(message: e.toString());
+      }
+    } else {
+      throw CustomException(message: 'No internet connection');
+    }
+  }
 }

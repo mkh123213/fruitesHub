@@ -19,4 +19,16 @@ class CustomBlocObserver extends BlocObserver {
       log('${bloc.runtimeType} $change');
     }
   }
+
+  @override
+  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
+    log('❌ Error in ${bloc.runtimeType}: $error');
+    super.onError(bloc, error, stackTrace);
+  }
+
+  @override
+  void onClose(BlocBase bloc) {
+    log('🔚 Closed: ${bloc.runtimeType}');
+    super.onClose(bloc);
+  }
 }

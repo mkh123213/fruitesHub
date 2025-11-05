@@ -4,13 +4,25 @@ class UserEntity {
 
   final String name;
   final String uid;
-  UserEntity({required this.email, required this.name, required this.uid});
+  final String? profilePicture;
+  UserEntity({
+    this.profilePicture,
+    required this.email,
+    required this.name,
+    required this.uid,
+  });
 
-  UserEntity copyWith({String? email, String? name, String? uid}) {
+  UserEntity copyWith({
+    String? email,
+    String? name,
+    String? uid,
+    String? profilePicture,
+  }) {
     return UserEntity(
       email: email ?? this.email,
       name: name ?? this.name,
       uid: uid ?? this.uid,
+      profilePicture: profilePicture,
     );
   }
 }

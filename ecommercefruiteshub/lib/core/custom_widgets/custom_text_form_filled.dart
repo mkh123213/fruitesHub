@@ -1,5 +1,5 @@
 import 'package:ecommercefruiteshub/core/helper_functions/app_regex.dart';
-import 'package:ecommercefruiteshub/core/utils/app_text_styles.dart';
+import 'package:ecommercefruiteshub/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

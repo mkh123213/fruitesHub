@@ -1,7 +1,7 @@
 import 'package:ecommercefruiteshub/core/entities/product_entity.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/spacing.dart';
-import 'package:ecommercefruiteshub/core/utils/app_colors.dart';
-import 'package:ecommercefruiteshub/core/utils/app_text_styles.dart';
+import 'package:ecommercefruiteshub/core/theming/app_colors.dart';
+import 'package:ecommercefruiteshub/core/theming/app_text_styles.dart';
 import 'package:ecommercefruiteshub/core/widgets/custom_network_image.dart';
 import 'package:ecommercefruiteshub/features/cart/domain/entites/cart_item_entity.dart';
 import 'package:ecommercefruiteshub/features/cart/presentation/cubit/cubit/cart_entity_cubit.dart';

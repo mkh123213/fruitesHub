@@ -4,7 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommercefruiteshub/core/custom_widgets/custom_elevated_button.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/build_error_bar.dart';
 import 'package:ecommercefruiteshub/core/services/shared_preferences_singleton.dart';
-import 'package:ecommercefruiteshub/core/utils/app_text_styles.dart';
+import 'package:ecommercefruiteshub/core/theming/app_text_styles.dart';
 import 'package:ecommercefruiteshub/core/utils/constants.dart';
 import 'package:ecommercefruiteshub/core/utils/routes_names.dart';
 import 'package:ecommercefruiteshub/core/widgets/custom_progress_hud.dart';

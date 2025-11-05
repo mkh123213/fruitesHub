@@ -6,7 +6,6 @@ import 'dart:math' as math;
 import 'package:crypto/crypto.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommercefruiteshub/core/errors/exceptions.dart';
-import 'package:ecommercefruiteshub/core/services/google_auth_sevice.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
@@ -36,6 +35,7 @@ abstract class AuthService {
     required String oldPassword,
     required String newPassword,
   });
+  Future<void> changeProfilePicture({required String profileImgUrl});
 }
 
 class FirebaseAuthService implements AuthService {
@@ -315,5 +315,10 @@ class FirebaseAuthService implements AuthService {
       log('FirebaseAuthException: ${e.code} - ${e.message}');
       throw CustomException(message: "some_thing_went_error".tr());
     }
+  }
+
+  @override
+  Future<void> changeProfilePicture({required String profileImgUrl}) async {
+    await FirebaseAuth.instance.currentUser?.updatePhotoURL(profileImgUrl);
   }
 }

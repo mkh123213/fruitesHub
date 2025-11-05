@@ -1,5 +1,5 @@
-import 'package:ecommercefruiteshub/core/utils/app_colors.dart';
-import 'package:ecommercefruiteshub/core/utils/app_text_styles.dart';
+import 'package:ecommercefruiteshub/core/theming/app_colors.dart';
+import 'package:ecommercefruiteshub/core/theming/app_text_styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 

@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:easy_stepper/easy_stepper.dart';
-import 'package:ecommercefruiteshub/core/utils/app_colors.dart';
+import 'package:ecommercefruiteshub/core/theming/app_colors.dart';
 import 'package:ecommercefruiteshub/core/utils/app_images.dart';
 import 'package:ecommercefruiteshub/core/utils/k_padding.dart';
 import 'package:ecommercefruiteshub/features/check_out/presentation/cubit/check_out_cubit/check_out_cubit.dart';

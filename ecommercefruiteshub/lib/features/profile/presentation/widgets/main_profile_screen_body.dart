@@ -3,13 +3,14 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommercefruiteshub/core/custom_widgets/custom_switch.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/extensions.dart';
 import 'package:ecommercefruiteshub/core/utils/app_images.dart';
+import 'package:ecommercefruiteshub/core/theming/app_text_styles.dart';
 import 'package:ecommercefruiteshub/core/utils/routes_names.dart';
 import 'package:ecommercefruiteshub/features/profile/presentation/cubit/cubit/main_profile_cubit.dart';
 import 'package:ecommercefruiteshub/features/profile/presentation/screens/order_track_screen.dart';
 import 'package:ecommercefruiteshub/features/profile/presentation/screens/profile_screen.dart';
 import 'package:ecommercefruiteshub/features/profile/presentation/widgets/build_menu_item.dart';
 import 'package:ecommercefruiteshub/features/profile/presentation/widgets/order_track_section/order_track_screen_body.dart';
-import 'package:ecommercefruiteshub/features/profile/presentation/widgets/profile_img_picker.dart';
+import 'package:ecommercefruiteshub/features/profile/presentation/widgets/profile_img_picker_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
@@ -28,7 +29,7 @@ class _MainProfileScreenBodyState extends State<MainProfileScreenBody> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('حسابي', style: TextStyle(color: Colors.black)),
+        title: Text("my_account".tr(), style: TextStyles.semiBold16),
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
@@ -38,7 +39,7 @@ class _MainProfileScreenBodyState extends State<MainProfileScreenBody> {
         child: Column(
           children: [
             const SizedBox(height: 10),
-            ProfileImgPicker(imgUrl: "imgUrl"),
+            ProfileImgPickerBlocConsumer(),
             const SizedBox(height: 10),
             const Text(
               'أحمد ياسر',
@@ -83,7 +84,7 @@ class _MainProfileScreenBodyState extends State<MainProfileScreenBody> {
                   context,
                   withNavBar: false,
                   screen: BlocProvider.value(
-                    value: context.read<MainProfileCubit>(),
+                    value: context.read<MainProfileCubit>()..getOrderTrack(),
                     child: OrderTrackScreen(),
                   ),
                 );

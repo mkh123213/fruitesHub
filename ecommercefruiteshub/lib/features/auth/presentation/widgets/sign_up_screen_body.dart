@@ -1,16 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommercefruiteshub/core/custom_widgets/custom_elevated_button.dart';
-import 'package:ecommercefruiteshub/core/custom_widgets/custom_text_form_filled.dart';
 import 'package:ecommercefruiteshub/core/custom_widgets/hv_hvnt_rich_text.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/build_error_bar.dart';
-import 'package:ecommercefruiteshub/core/helper_functions/extensions.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/spacing.dart';
-import 'package:ecommercefruiteshub/core/services/shared_preferences_singleton.dart';
-import 'package:ecommercefruiteshub/core/utils/app_text_styles.dart';
-import 'package:ecommercefruiteshub/core/utils/constants.dart';
+import 'package:ecommercefruiteshub/core/theming/app_text_styles.dart';
 import 'package:ecommercefruiteshub/core/utils/k_padding.dart';
 import 'package:ecommercefruiteshub/core/widgets/custom_progress_hud.dart';
-import 'package:ecommercefruiteshub/features/auth/presentation/cubits/sign_in_cubit/sign_in_cubit.dart';
 import 'package:ecommercefruiteshub/features/auth/presentation/cubits/sign_up_cubit/sign_up_cubit.dart';
 import 'package:ecommercefruiteshub/features/auth/presentation/widgets/custom_check_box.dart';
 import 'package:ecommercefruiteshub/features/auth/presentation/widgets/sign_up_form.dart';

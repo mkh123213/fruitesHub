@@ -1,8 +1,6 @@
 import 'package:data_connection_checker_tv/data_connection_checker.dart';
 import 'package:ecommercefruiteshub/core/connection/network_info.dart';
 import 'package:ecommercefruiteshub/core/cubits/products_cubit/products_cubit.dart';
-import 'package:ecommercefruiteshub/core/repos/orders_repo/orders_repo_impl.dart';
-import 'package:ecommercefruiteshub/core/repos/orders_repo/orders_repo_interface.dart';
 import 'package:ecommercefruiteshub/core/services/data_storage/data_storage.dart';
 import 'package:ecommercefruiteshub/core/services/data_storage/suba_base_storage.dart';
 import 'package:ecommercefruiteshub/core/services/auth_service.dart';
@@ -42,6 +40,7 @@ import 'package:ecommercefruiteshub/features/products/domain/us_cases/search_pro
 import 'package:ecommercefruiteshub/features/profile/data/data_source/main_profile_remote_data_source.dart';
 import 'package:ecommercefruiteshub/features/profile/domain/repo_interface/maim_profile_repo_interface.dart';
 import 'package:ecommercefruiteshub/features/profile/data/repo_impl/main_profile_repo_impl.dart';
+import 'package:ecommercefruiteshub/features/profile/domain/use_cases/save_profile_img_url_use_case.dart';
 import 'package:ecommercefruiteshub/features/profile/domain/use_cases/update_name_and_email_use_case.dart';
 import 'package:ecommercefruiteshub/features/profile/domain/use_cases/update_password_use_case.dart';
 import 'package:ecommercefruiteshub/features/profile/domain/use_cases/upload_image_use_case.dart';
@@ -139,6 +138,7 @@ void setupGetit() {
   getIt.registerSingleton(UploadImageUseCase(repo: getIt.get()));
   getIt.registerSingleton(UpdateNameAndEmailUseCase(repo: getIt.get()));
   getIt.registerSingleton(UpdatePasswordUseCase(repo: getIt.get()));
+  getIt.registerSingleton(ChangeProfilePictureUseCase(repo: getIt.get()));
 
   //cubit
   getIt.registerFactory(
@@ -165,6 +165,7 @@ void setupGetit() {
   getIt.registerFactory(() => CheckOutCubit(addOrderUseCase: getIt.get()));
   getIt.registerFactory(
     () => MainProfileCubit(
+      changeProfilePictureUseCase: getIt.get(),
       getOrderTrackUseCase: getIt.get(),
       updatePasswordUseCase: getIt.get(),
       uploadImageUseCase: getIt.get(),

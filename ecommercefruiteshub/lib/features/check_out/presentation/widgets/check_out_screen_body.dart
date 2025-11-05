@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:ecommercefruiteshub/core/custom_widgets/custom_elevated_button.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/build_error_bar.dart';
-import 'package:ecommercefruiteshub/core/utils/app_keys.dart';
+import 'package:ecommercefruiteshub/core/secure/constants/constants.dart';
 import 'package:ecommercefruiteshub/core/utils/k_padding.dart';
 import 'package:ecommercefruiteshub/core/utils/routes_names.dart';
 import 'package:ecommercefruiteshub/core/entities/order_entity.dart';
@@ -169,36 +169,36 @@ class _CheckOutScreenBodyState extends State<CheckOutScreenBody> {
       orderEntity,
     );
     var cubit = context.read<CheckOutCubit>();
-    cubit.addOrder(order: orderEntity);
+    // cubit.addOrder(order: orderEntity);
 
-    // Navigator.of(context, rootNavigator: true).push(
-    //   MaterialPageRoute(
-    //     builder: (BuildContext context) {
-    //       return PaypalCheckoutView(
-    //         sandboxMode: true,
-    //         clientId: kPaypalClientId,
-    //         secretKey: kPaypalSecretKey,
-    //         transactions: [paypalPaymentEntity],
-    //         note: "Contact us for any questions on your order.",
-    //         onSuccess: (Map params) async {
-    //           log("onSuccess: $params");
-    //           Navigator.pop(context);
-    //           cubit.addOrder(order: orderEntity);
-    //           Navigator.of(
-    //             context,
-    //           ).pushNamed(RoutesNames.paymentSuccess, arguments: orderEntity);
-    //           // print("onSuccess: $params");
-    //         },
-    //         onError: (error) {
-    //           print("onError: $error");
-    //           Navigator.pop(context);
-    //         },
-    //         onCancel: () {
-    //           print('cancelled:');
-    //         },
-    //       );
-    //     },
-    //   ),
-    // );
+    Navigator.of(context, rootNavigator: true).push(
+      MaterialPageRoute(
+        builder: (BuildContext context) {
+          return PaypalCheckoutView(
+            sandboxMode: true,
+            clientId: kPaypalClientId,
+            secretKey: kPaypalSecretKey,
+            transactions: [paypalPaymentEntity],
+            note: "Contact us for any questions on your order.",
+            onSuccess: (Map params) async {
+              log("onSuccess: $params");
+              Navigator.pop(context);
+              cubit.addOrder(order: orderEntity);
+              Navigator.of(
+                context,
+              ).pushNamed(RoutesNames.paymentSuccess, arguments: orderEntity);
+              // print("onSuccess: $params");
+            },
+            onError: (error) {
+              print("onError: $error");
+              Navigator.pop(context);
+            },
+            onCancel: () {
+              print('cancelled:');
+            },
+          );
+        },
+      ),
+    );
   }
 }

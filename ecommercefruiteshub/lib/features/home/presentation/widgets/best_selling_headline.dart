@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecommercefruiteshub/core/utils/app_text_styles.dart';
+import 'package:ecommercefruiteshub/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class BestSellingHeadline extends StatelessWidget {

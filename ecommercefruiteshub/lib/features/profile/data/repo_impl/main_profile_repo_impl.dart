@@ -71,4 +71,16 @@ class MainProfileRepoImpl implements MainProfileRepoInterface {
       return Left(ServerFailure(e.toString()));
     }
   }
+
+  @override
+  Future<Either<Failure, Unit>> changeProfilePicture({
+    required String profileImgUrl,
+  }) async {
+    try {
+      await remoteDataSource.changeProfilePicture(profileImgUrl: profileImgUrl);
+      return Right(unit);
+    } on CustomException catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
+  }
 }

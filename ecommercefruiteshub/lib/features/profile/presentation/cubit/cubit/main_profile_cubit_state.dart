@@ -29,6 +29,16 @@ final class LoadingImgError extends MainProfileState {
   LoadingImgError({required this.message});
 }
 
+final class SaveProfilPIctureUrlSuccess extends MainProfileState {
+  final String imageUrl;
+  SaveProfilPIctureUrlSuccess({required this.imageUrl});
+}
+
+final class SaveProfilPIctureUrlFailure extends MainProfileState {
+  final String message;
+  SaveProfilPIctureUrlFailure({required this.message});
+}
+
 final class UpdatePasswordLoading extends MainProfileState {}
 
 final class UpdatePasswordError extends MainProfileState {
@@ -49,3 +59,5 @@ final class OrderTrackFailure extends MainProfileState {
   final String message;
   OrderTrackFailure({required this.message});
 }
+
+final class OrderTrackEmpty extends MainProfileState {}

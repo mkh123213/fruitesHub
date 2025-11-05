@@ -5,7 +5,8 @@ import 'package:ecommercefruiteshub/core/helper_functions/build_error_bar.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/get_dummy_product.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/spacing.dart';
 import 'package:ecommercefruiteshub/core/utils/app_images.dart';
-import 'package:ecommercefruiteshub/core/utils/app_text_styles.dart';
+import 'package:ecommercefruiteshub/core/theming/app_text_styles.dart';
+import 'package:ecommercefruiteshub/core/widgets/custom_no_results__widget.dart';
 import 'package:ecommercefruiteshub/core/widgets/fruit_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -55,16 +56,7 @@ class ProductsScreenBlocConsumer extends StatelessWidget {
         } else if (state is SearchProductsEmpty) {
           return SliverToBoxAdapter(
             child: Center(
-              child: Column(
-                children: [
-                  SvgPicture.asset(Assets.noSearchResult),
-                  highspace(height: 10),
-                  Text('Search'.tr(), style: TextStyles.bold16),
-                  highspace(height: 10),
-
-                  Text('no_search_result'.tr(), style: TextStyles.bold16),
-                ],
-              ),
+              child: CustomNoResultWidget(text: 'search_result_not_found'.tr()),
             ),
           );
         } else {

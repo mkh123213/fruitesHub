@@ -22,4 +22,8 @@ abstract class MainProfileRepoInterface {
   });
 
   Future<Either<Failure, List<OrderTrack>>> getOrderTrack();
+
+  Future<Either<Failure, Unit>> changeProfilePicture({
+    required String profileImgUrl,
+  });
 }

@@ -1,4 +1,4 @@
-import 'package:ecommercefruiteshub/core/utils/app_colors.dart';
+import 'package:ecommercefruiteshub/core/theming/app_colors.dart';
 import 'package:ecommercefruiteshub/core/utils/app_decorations.dart';
 import 'package:flutter/material.dart';
 

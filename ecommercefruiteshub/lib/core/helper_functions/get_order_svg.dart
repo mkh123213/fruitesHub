@@ -4,7 +4,7 @@ import 'package:svg_flutter/svg.dart';
 SvgPicture getSvg({required int index}) {
   switch (index) {
     case 0:
-      return SvgPicture.asset("assets/images/order_track.svg");
+      return SvgPicture.asset(Assets.orderTrack);
     case 1:
       return SvgPicture.asset(Assets.orderAccepted);
     case 2:

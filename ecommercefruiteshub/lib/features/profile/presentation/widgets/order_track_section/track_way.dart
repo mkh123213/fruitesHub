@@ -1,5 +1,5 @@
 import 'package:ecommercefruiteshub/core/helper_functions/get_order_svg.dart';
-import 'package:ecommercefruiteshub/core/utils/app_colors.dart';
+import 'package:ecommercefruiteshub/core/theming/app_colors.dart';
 import 'package:ecommercefruiteshub/core/utils/k_padding.dart';
 import 'package:ecommercefruiteshub/features/profile/domain/entities/order_track_entity.dart';
 import 'package:flutter/material.dart';

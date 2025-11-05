@@ -1,11 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecommercefruiteshub/core/helper_functions/get_user.dart';
 import 'package:ecommercefruiteshub/core/utils/routes_names.dart';
-import 'package:ecommercefruiteshub/features/auth/domain/entities/user_entity.dart';
 import 'package:ecommercefruiteshub/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:ecommercefruiteshub/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:ecommercefruiteshub/features/best_selling/presentations/screens/best_selling_screen.dart';
-import 'package:ecommercefruiteshub/features/best_selling/presentations/widgets/best_selling_screen_body.dart';
 import 'package:ecommercefruiteshub/core/entities/order_entity.dart';
 import 'package:ecommercefruiteshub/features/check_out/presentation/screens/check_out_screen.dart';
 import 'package:ecommercefruiteshub/features/check_out/presentation/screens/payment_sucess.dart';
